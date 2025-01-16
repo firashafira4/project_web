@@ -12,10 +12,6 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-// Get room types for dropdown
-$stmt = $conn->query("SELECT DISTINCT tipe_kamar FROM kamar");
-$roomTypes = $stmt->fetchAll(PDO::FETCH_COLUMN);
-
 // Get all rooms
 $stmt = $conn->query("SELECT * FROM kamar");
 $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -36,7 +32,6 @@ $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
             padding: 10px;
             text-align: center;
         }
-    
     </style>
 </head>
 <body class="bg-gray-50">
@@ -55,13 +50,30 @@ $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </nav>
 
-
-
     <!-- Room Listings -->
     <div class="max-w-7xl mx-auto mt-8 grid grid-cols-3 gap-6">
-        <?php foreach($rooms as $room): ?>
+        <?php foreach($rooms as $room): 
+            // Tentukan nama gambar berdasarkan tipe kamar
+            $imageName = '';
+            if ($room['tipe_kamar'] == 'Deluxe Room') {
+                $imageName = 'deluxe5.jpg';
+            } elseif ($room['tipe_kamar'] == 'Standard Room') {
+                $imageName = 'standard.jpg';
+            } elseif ($room['tipe_kamar'] == 'Superior Room') {
+                $imageName = 'kamar3.jpg';
+            } elseif ($room['tipe_kamar'] == 'Single Room') {
+                $imageName = 'kamar4.jpg';
+            } elseif ($room['tipe_kamar'] == 'Double Room') {
+                $imageName = 'double3.jpg';
+            } elseif ($room['tipe_kamar'] == 'Family Room') {
+                $imageName = 'famm.jpg';
+            }
+
+            // Menyusun path gambar
+            $imagePath = '/public/images/' . $imageName;
+        ?>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src="<?php echo $room['gambar'] ?: '/api/placeholder/300/200'; ?>" 
+            <img src="<?php echo $imagePath; ?>" 
                  alt="<?php echo htmlspecialchars($room['tipe_kamar']); ?>"
                  class="w-full h-48 object-cover">
             <div class="p-6">
@@ -77,10 +89,9 @@ $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     IDR <?php echo number_format($room['harga_permalam'], 0, ',', '.'); ?> / night
                     </p>
                     <a href="/booking/<?php echo $room['id_kamar']; ?>" 
-   class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600">
-   Booking
-</a>
-
+                       class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600">
+                       Booking
+                    </a>
                 </div>
             </div>
         </div>

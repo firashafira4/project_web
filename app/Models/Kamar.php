@@ -11,7 +11,7 @@ class Kamar extends Model
 
     // Nama tabel di database
     protected $table = 'kamar';
-
+    protected $primaryKey = 'id'; // Kolom primary key (ubah jika berbeda)
     // Menentukan kolom yang dapat diisi
     protected $fillable = [
         'tipe_kamar',

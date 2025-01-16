@@ -33,5 +33,6 @@ Route::get('/rooms/{room}/reserve', [ReservasiController::class, 'create'])->nam
 Route::post('/rooms/reserve', [ReservasiController::class, 'store'])->name('reservations.store');
 
 Route::get('/photos', [PhotoController::class, 'index'])->name('photos.index');
-Route::get('/booking/{id}', [BookingController::class, 'showBookingPage']);
-
+Route::get('/booking/{id}', [BookingController::class, 'showBookingPage'])->name('booking.show');
+// Menangani pengiriman form pemesanan
+Route::post('/booking/submit', [BookingController::class, 'store'])->name('booking.submit');
