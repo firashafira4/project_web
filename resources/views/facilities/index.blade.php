@@ -63,7 +63,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('Hyatt Regency Malta Opens.jpg') no-repeat center center/cover;
+    background: url("{{ asset('image/taman.jpg') }}") no-repeat center center/cover;
     height: 60vh;
     color: white;
     display: flex;
@@ -254,36 +254,36 @@ button:hover {
         <div class="facility-cards">
             <!-- Facility 1 -->
             <div class="facility-card">
-                <img src="taman.jpg" alt="Garden">
+                <img src="{{ asset('image/taman.jpg') }}" alt="Garden">
                 <h3>Garden</h3>
                 <button class="learn-more" onclick="openModal('Garden', 'Di tengah hotel mewah kami, terdapat sebuah taman unik dengan sentuhan kehangatan alami yang memanjakan mata. Taman ini didominasi oleh elemen kayu berwarna cokelat, menciptakan suasana yang hangat dan bersahaja sekaligus elegan. Jalan setapak dari kayu yang tertata rapi menghubungkan berbagai sudut taman, mengundang tamu untuk menjelajahi ruang-ruang yang dirancang dengan hati-hati. Bangku kayu yang artistik, gazebo dengan detail ukiran, dan pergola yang dihiasi tanaman merambat menjadi titik fokus yang menambah pesona. Pot kayu dengan tanaman hijau segar dan lampu taman bergaya rustic memperkuat nuansa alami dan harmoni. Taman ini adalah tempat yang sempurna untuk bersantai, membaca buku, atau menikmati momen tenang di bawah naungan pohon dengan sentuhan keindahan klasik yang memikat')">Selengkapnya</button>
             </div>
 
             <!-- Facility 2 -->
             <div class="facility-card">
-                <img src="restorant.jpg" alt="Restaurant">
+                <img src="{{ asset('image/restorant.jpg') }}" alt="Restaurant">
                 <h3>Restaurant</h3>
                 <button class="learn-more" onclick="openModal('Restaurant', 'Restoran di hotel kami dirancang dengan nuansa coklat yang hangat dan elegan, menciptakan atmosfer yang nyaman dan menenangkan bagi setiap pengunjung. Dengan pencahayaan lembut yang memantulkan kehangatan kayu coklat pada furnitur dan dinding, restoran ini menjadi tempat yang sempurna untuk menikmati hidangan berkualitas tinggi. Nuansa coklat yang mendominasi, dipadukan dengan aksen-aksen elegan, memberikan kesan mewah namun tetap bersahaja. Baik untuk santap siang santai, makan malam romantis, maupun acara bisnis, restoran kami siap memberikan pengalaman bersantap yang memuaskan dalam suasana yang penuh kenyamanan dan gaya.')">Selengkapnya</button>
             </div>
 
             <!-- Facility 3 -->
             <div class="facility-card">
-                <img src="keong.jpg" alt="Swimming Pool">
+                <img src="{{ asset('image/keong.jpg') }}" alt="Swimming Pool">
                 <h3>Swimming Pool</h3>
                 <button class="learn-more" onclick="openModal('Swimming Pool', 'Kolam renang di hotel kami memiliki desain unik dengan ciri khas berbentuk keong yang memikat, menciptakan pengalaman berenang yang berbeda dari biasanya. Dengan bentuk spiral yang elegan, kolam ini mengundang pengunjung untuk menikmati suasana yang tenang dan menenangkan, seolah meluncur dalam bentuk keong yang melambangkan kelancaran dan keindahan alami. Dikelilingi pemandangan hijau dan suasana yang asri, kolam renang ini menawarkan lebih dari sekadar tempat untuk berenang, tetapi juga sebuah ruang untuk relaksasi dan penyegaran yang sempurna.')">Selengkapnya</button>
             </div>
             <div class="facility-card">
-                <img src="gym.jpg" alt="Swimming Pool">
+                <img src="{{ asset('image/gym.jpg') }}" alt="Swimming Pool">
                 <h3>Gym</h3>
                 <button class="learn-more" onclick="openModal('Gym', 'Gym yang dirancang dengan perpaduan nuansa hitam dan coklat yang modern dan energik, menciptakan atmosfer yang sempurna untuk berolahraga. Dinding dengan aksen coklat hangat berpadu dengan peralatan fitness berwarna hitam yang elegan, memberikan kesan kekuatan dan ketenangan. Pencahayaan yang dramatis menambah suasana intens, sementara lantai kayu dengan sentuhan coklat menambah kenyamanan saat berolahraga. Dengan desain yang stylish dan fungsional, gym kami tidak hanya menyediakan ruang untuk mencapai kebugaran fisik, tetapi juga memberikan pengalaman berolahraga yang penuh semangat dalam suasana yang menenangkan.')">Selengkapnya</button>
             </div>
             <div class="facility-card">
-                <img src="aula.jpg" alt="Swimming Pool">
+                <img src="{{ asset('image/aula.jpg') }}" alt="Swimming Pool">
                 <h3>Aula</h3>
                 <button class="learn-more" onclick="openModal('aula', 'Aula kami memancarkan kemewahan dan kehangatan dengan dominasi warna coklat yang elegan, dipadukan dengan pencahayaan lampu-lampu mewah yang menciptakan atmosfer yang luar biasa. Dinding beraksen coklat yang kaya memberikan kesan hangat dan menenangkan, sementara lampu gantung berdesain mewah dan cahaya lembutnya menambah kesan glamor. Setiap sudut aula ini dirancang untuk memberikan kesan megah, sempurna untuk berbagai acara, mulai dari pertemuan formal hingga perayaan istimewa. Nuansa coklat yang mendalam berpadu dengan kemewahan lampu-lampu tersebut menciptakan suasana yang menawan dan penuh pesona.')">Selengkapnya</button>
             </div>
             <div class="facility-card">
-                <img src="musholla.jpg" alt="Swimming Pool">
+                <img src="{{ asset('image/musholla.jpg') }}" alt="Swimming Pool">
                 <h3>Musholla</h3>
                 <button class="learn-more" onclick="openModal('musholla', 'Musholla dengan nuansa coklat keemasan yang memberikan kesan kehangatan dan ketenangan, menciptakan tempat yang ideal untuk beribadah. Dinding yang dihiasi dengan aksen coklat elegan, dipadukan dengan sentuhan keemasan yang memancarkan cahaya lembut, menciptakan atmosfer yang sakral dan penuh kedamaian. Pencahayaan yang lembut semakin menambah ketenangan, menjadikan musholla ini tempat yang sempurna untuk salat, zikir, dan bermunajat kepada Allah. Dengan lafadz-lafadz yang tercantum dengan indah di beberapa sudut, musholla ini mengundang setiap pengunjung untuk merasakan kedamaian sejati dalam ibadah.')">Selengkapnya</button>
             </div>

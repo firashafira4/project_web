@@ -5,7 +5,9 @@ use App\Http\Controllers\KamarController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ReservasiController;
-use App\Http\Controllers\ImageController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\BookingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,11 @@ Route::get('/facilities', [FacilityController::class, 'index']);
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::post('/blog/experience', [BlogController::class, 'storeExperience']);
 // Route to show the form (GET method)
-Route::get('/reservasi', [ReservasiController::class, 'index'])->name('reservasi.index');
+Route::get('/rooms/{room}/reserve', [ReservasiController::class, 'create'])->name('reservasi.create');
 
 // Route to handle form submission (POST method)
-Route::post('/reservasi', [ReservasiController::class, 'store'])->name('reservasi.store');
+Route::post('/rooms/reserve', [ReservasiController::class, 'store'])->name('reservations.store');
 
-Route::get('/upload', [ImageController::class, 'showForm']);
-Route::post('/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
+Route::get('/photos', [PhotoController::class, 'index'])->name('photos.index');
+Route::get('/booking/{id}', [BookingController::class, 'showBookingPage']);
+

@@ -9,15 +9,17 @@ class Reservasi extends Model
 {
     use HasFactory;
 
-    protected $table = 'reservasi'; // Sesuaikan dengan nama tabel di database
-
     protected $fillable = [
-        'id_user',
-        'id_kamar',
-        'tgl_checkin',
-        'tgl_checkout',
-        'jumlah_kamar',
-        'total_harga',
-        'status',
+        'nama',
+        'email',
+        'telepon',
+        'check_in',
+        'check_out',
+        'room_id',
     ];
+
+    public function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
 }

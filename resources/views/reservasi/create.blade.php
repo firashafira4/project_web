@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2>Booking Kamar: {{ $room->tipe_kamar }}</h2>
+    <h2>Reservasi Kamar: {{ $room->tipe_kamar }}</h2>
     <form action="{{ route('reservations.store') }}" method="POST">
         @csrf
         <input type="hidden" name="room_id" value="{{ $room->id }}">
@@ -26,7 +26,7 @@
             <label for="check_out" class="form-label">Tanggal Check-Out</label>
             <input type="date" class="form-control" id="check_out" name="check_out" required>
         </div>
-        <button type="submit" class="btn btn-success">Konfirmasi Booking</button>
+        <button type="submit" class="btn btn-success">Konfirmasi Reservasi</button>
     </form>
 </div>
 @endsection

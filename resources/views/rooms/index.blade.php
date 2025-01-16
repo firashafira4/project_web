@@ -33,7 +33,7 @@ $result = $conn->query($sql);
         }
         .hero {
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('kamar.jpg') no-repeat center center/cover;
+                        url("{{ asset('image/kamar.jpg') }}") no-repeat center center/cover;
             height: 70vh;
             color: white;
             text-align: center;
@@ -199,8 +199,9 @@ $result = $conn->query($sql);
             // Display rooms from database
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
+                    $imagePath = 'public/image' . $row['gambar'];
                     echo '<div class="room-card">';
-                    echo '<img src="' . $row['gambar'] . '" alt="' . $row['tipe_kamar'] . '">';
+                    echo '<img src="' . $imagePath . '" alt="' . $row['tipe_kamar'] . '">';
                     echo '<h3>' . $row['tipe_kamar'] . '</h3>';
                     echo '<button class="btn-details" onclick="openModal(\'' . $row['tipe_kamar'] . '\', \'' . $row['deskripsi'] . '\', ' . $row['harga_permalam'] . ', ' . $row['kapasitas'] . ', ' . $row['jumlah_kamar'] . ')">Selengkapnya</button>';
                     echo '</div>';
@@ -227,6 +228,18 @@ $result = $conn->query($sql);
             </div>
         </div>
     </div>
+    <div class="room-cards">
+    @foreach($rooms as $room)
+    <div class="room-card">
+        <img src="{{ asset('storage/' . $room->gambar) }}" alt="{{ $room->tipe_kamar }}">
+        <h3>{{ $room->tipe_kamar }}</h3>
+        <p>{{ $room->deskripsi }}</p>
+        <p><strong>Harga:</strong> Rp {{ number_format($room->harga_permalam, 0, ',', '.') }} / malam</p>
+        <p><strong>Kapasitas:</strong> {{ $room->kapasitas }} orang</p>
+        <a href="{{ route('reservasi.create', ['room' => $room->id]) }}">Reservasi</a>
+    </div>
+    @endforeach
+</div>
 
     <!-- Footer -->
     <footer>

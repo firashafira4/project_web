@@ -25,8 +25,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('Hyatt Regency Malta Opens.jpg') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), 
+                        url("{{ asset('image/Hyatt Regency Malta Opens.jpg') }}") no-repeat center center/cover;
             height: 70vh;
             color: white;
             text-align: center;
@@ -190,15 +190,15 @@
         <h2>Explore Our Facilities</h2>
         <div class="room-cards">
             <div class="room-card">
-                <img src="taman.jpg" alt="Garden">
+                <img src="{{ asset('image/taman.jpg') }}" alt="Garden">
                 <h3>Garden</h3>
             </div>
             <div class="room-card">
-                <img src="restorant.jpg" alt="Restaurant">
+                <img src="{{ asset('image/restorant.jpg') }}" alt="Restaurant">
                 <h3>Restaurant</h3>
             </div>
             <div class="room-card">
-                <img src="keong.jpg" alt="Swimming Pool">
+                <img src="{{ asset('image/keong.jpg') }}" alt="Swimming Pool">
                 <h3>Swimming Pool</h3>
             </div>
         </div>

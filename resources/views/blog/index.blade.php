@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #6B4F4F;
+            background-color: rgb(24, 42, 61);
             color: white;
             padding: 20px;
             text-align: center;
@@ -43,7 +43,7 @@
         }
 
         .box h2 {
-            color: #6B4F4F;
+            color: rgb(24, 42, 61);
             font-size: 1.8em;
             margin-bottom: 10px;
         }
@@ -79,13 +79,13 @@
         }
 
         .experience-form button {
-            background-color: #6B4F4F;
+            background-color: rgb(24, 42, 61);
             color: white;
             cursor: pointer;
         }
 
         .experience-form button:hover {
-            background-color: #5A3D3D;
+            background-color:rgb(24, 42, 61);
         }
 
         .carousel-inner {
@@ -106,7 +106,7 @@
         }
 
         .carousel-control-prev-icon, .carousel-control-next-icon {
-            background-color: #6B4F4F;
+            background-color: rgb(24, 42, 61);
         }
 
         ul {
@@ -142,7 +142,7 @@
         <!-- Sejarah Hotel -->
         <div class="box">
             <h2>Sejarah Hotel</h2>
-            <img src="images/hotel-history.jpg" alt="Sejarah Hotel">
+            <img src="{{ asset('image/hotell.jpg') }}" alt="Sejarah Hotel">
             <p>Hotel kami didirikan pada bulan November 2023 dengan visi untuk menghadirkan pengalaman menginap yang nyaman dan berkesan bagi setiap tamu. Berlokasi strategis di tengah kota, hotel ini dirancang untuk memenuhi kebutuhan wisatawan bisnis maupun keluarga yang mencari tempat istirahat yang modern dan berkualitas...</p>
         </div>
 
@@ -153,21 +153,21 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="slide-content">
-                            <img src="images/destination1.jpg" alt="Rute Perjalanan">
+                            <img src="{{ asset('image/Bunder.jpeg') }}" alt="Rute Perjalanan">
                             <h3>Rute Perjalanan</h3>
                             <p>Hanya 15 menit dari bandara utama, akses mudah dengan transportasi umum.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="slide-content">
-                            <img src="images/destination2.jpg" alt="Wisata Kuliner">
+                            <img src="{{ asset('image/Wisata.jpeg') }}" alt="Wisata Kuliner">
                             <h3>Wisata Kuliner</h3>
                             <p>Rasakan masakan lokal terbaik di sekitar hotel, mulai dari makanan tradisional hingga street food.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="slide-content">
-                            <img src="images/destination3.jpg" alt="Wisata Populer">
+                            <img src="{{ asset('image/janprak.jpeg') }}" alt="Wisata Populer">
                             <h3>Wisata Populer</h3>
                             <p>Kunjungi destinasi wisata terdekat seperti pantai dan taman kota.</p>
                         </div>
@@ -177,7 +177,7 @@
         <!-- Promosi dan Diskon -->
         <div class="box">
             <h2>Promosi dan Diskon</h2>
-            <img src="images/promo.jpg" alt="Promosi Hotel">
+            <img src="{{ asset('image/promo.jpeg') }}" alt="Promosi Hotel">
             <p>1. Promosi Paket Menginap</p>
             <p>2. Promosi Restoran</p>
             <p>3. Promosi Akhir Pekan</p>
